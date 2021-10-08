@@ -1,0 +1,44 @@
+
+
+﻿<html>
+<head>
+<title>admissions report 2020-21</title>
+</head>
+<body>
+<h1> admissions report </h1>
+<br>
+
+<table border="2">
+
+<tr>
+  <th>id</th>
+  <th>Student Name</th>
+  <th>Father Name</th>
+  <th>class</th>
+  <th>contact</th>
+  <th>Actions</th>
+
+</tr>
+{% for s in allstudents %}
+
+<tr>
+  <td>{{s.id}}</td>
+  <td>{{s.name}}</td>
+  <td> {{s.fathername}}</td>
+  <td>{{s.class}}</td>
+  <td>{{s.contact}}</td>
+  <td>
+    <a href="/ad/delete/{{s.id}}">delete</a> &nbsp;&nbsp;
+    <a href="/ad/update/{{s.id}}">update</a>
+  </td>
+
+</tr>
+
+<br>
+
+{% endfor %}
+
+</table>
+</body>
+
+</html>

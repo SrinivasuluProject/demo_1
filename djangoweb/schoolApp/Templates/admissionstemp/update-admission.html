@@ -1,0 +1,23 @@
+{% load static %}
+
+﻿<html>
+<head>
+<title>update students details page</title>
+<<link rel="stylesheet" href="{% static 'stylesheets/style.css'%}"/>
+</head>
+<body bgcolor=pink>
+<h1> Hello , welcome to update students page.</h1>
+<img src="{%static "images/earrings.jpg" %}" alt="image not found" width=250 height= 200/>
+<h2>Please fill below application</h2>
+
+<form method='POST'>
+  {{form.as_p}}
+
+
+  <input type="submit" value="update Student">
+
+  {% csrf_token %}
+</form>
+</body>
+
+</html>
